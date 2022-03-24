@@ -7,13 +7,13 @@
     <ContentPage.Content>
         <StackLayout Grid.Row="0" VerticalOptions="Start">
             <Label Text="Form Data IOT" FontAttributes="Bold" FontSize="Title" TextColor="Gray" HorizontalTextAlignment="Start"/>
-            <Entry x:Name="day" Text="{Binding Day}" Placeholder="Day (Required)"/>
+            <Entry x:Name="day" Text="{Binding Day}" Placeholder="Day (Required)" IsReadOnly="True"/>
             <Entry x:Name="humidity" Text="{Binding Humidity}" Placeholder="Humidity (Required)"/>
             <Entry x:Name="temperature" Text="{Binding Temperature}" Placeholder="Temperature (Required)"/>
             <Entry x:Name="status" Text="{Binding Status}" Placeholder="Status (Required)"/>
             <Entry x:Name="time" Text="{Binding Time}" Placeholder="Time (Required)"/>
-            <Button Text="Update" Clicked="Button_Clicked"/>
-            <Button Text="Edit" Clicked="Button_Clicked_1"/>
+            <Button Text="Delete" Clicked="Button_Clicked"/>
+            <Button Text="Update" Clicked="Button_Clicked_1"/>
 
         </StackLayout>
     </ContentPage.Content>

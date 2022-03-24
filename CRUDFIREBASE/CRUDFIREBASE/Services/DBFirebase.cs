@@ -44,12 +44,10 @@ namespace CRUDFIREBASE.Services
                  .OnceAsync<DataIOT>()).FirstOrDefault
                (a => a.Object.Day == day);
 
-
-
-
             DataIOT iot = new DataIOT() { Day = day, Humidity = humidity, Temperature = temperature, Status = status, Time = time };
             await client
                   .Child("FirebaseIOT")
+                  .Child(toUpdateIOT.Key)
                   .PutAsync(iot);
 
         }
